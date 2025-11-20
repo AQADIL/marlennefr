@@ -338,7 +338,7 @@ if (footer && footerText) {
             start: 'top 85%',
             once: true
         },
-        delay: 3
+        delay: 7
     })
         .to(footerText, {
             duration: 0.5,
