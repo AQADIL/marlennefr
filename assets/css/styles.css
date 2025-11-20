@@ -742,7 +742,6 @@ body {
 /* Footer */
 .footer {
     padding: 40px 0;
-    text-align: center;
     position: relative;
     overflow: hidden;
 }
@@ -771,6 +770,17 @@ body {
     color: var(--primary-color);
     letter-spacing: 2px;
     font-family: 'Orbitron', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
 }
 
 /* Animations */

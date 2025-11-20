@@ -277,7 +277,8 @@ const I18N = {
         'contact.number': 'Number',
         'contact.whatsapp': 'WhatsApp',
         'contact.instagram': 'Instagram',
-        'footer.made': 'Made with love by Akadil'
+        'footer.made': 'Made with love by Marlen',
+        'footer.made.secret': 'Made with love by Akadil 🤫'
     },
     kz: {
         'page.title': 'Марлен Мейірбек — Сәтбаев университетінің студенті',
@@ -323,9 +324,45 @@ const I18N = {
         'contact.number': 'Нөмір',
         'contact.whatsapp': 'WhatsApp',
         'contact.instagram': 'Instagram',
-        'footer.made': 'Бұл сайтты махаббатпен жасаған – Akadil'
+        'footer.made': 'Бұл сайтты махаббатпен жасаған – Марлен',
+        'footer.made.secret': 'Бұл сайтты махаббатпен жасаған – Akadil 🤫'
     }
 };
+const footer = document.querySelector('.footer');
+const footerText = footer ? footer.querySelector('.copyright') : null;
+
+if (footer && footerText) {
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: footer,
+            start: 'top 85%',
+            once: true
+        },
+        delay: 3
+    })
+        .to(footerText, {
+            duration: 0.5,
+            y: -6,
+            opacity: 0,
+            filter: 'blur(4px)',
+            ease: 'power2.inOut',
+            onComplete: () => {
+                const langAttr = document.documentElement.lang;
+                const currentLang = langAttr === 'kk' ? 'kz' : 'en';
+                const dict = I18N[currentLang] || I18N.en;
+                const secretKey = 'footer.made.secret';
+                footerText.textContent = dict[secretKey] || footerText.textContent;
+            }
+        })
+        .to(footerText, {
+            duration: 0.6,
+            y: 0,
+            opacity: 1,
+            filter: 'blur(0px)',
+            color: 'var(--accent-color)',
+            ease: 'power2.out'
+        });
+}
 
 function applyLanguage(lang) {
     const dict = I18N[lang] || I18N.en;
