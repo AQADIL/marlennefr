@@ -1,6 +1,6 @@
-# Legendary Nefr from Satbayev
+# Spinning Diamond Portfolio
 
-A tiny one-page website for Marlen Meirbek  a.k.a. the **"nefr from Satbayev"**.
+A tiny one-page website for Marlen Meirbek, built as a playful personal landing page.
 
 This is not a corporate portfolio with 10 years of fake experience.
 Its a playful mix of:
@@ -170,7 +170,7 @@ steal some CSS ideas, or fork and turn it into your own cursed portfolio.
 
 ## Credits
 
-- **Design & concept:** Marlen Meirbek (a.k.a. nefr from Satbayev)
+- **Design & concept:** Marlen Meirbek
 - **Implementation & 3D / animations help:** Akadil
 
-If you build something cool on top of this, drop a link somewhere. The nefr will be proud.
+If you build something cool on top of this, drop a link somewhere. Marlen will be proud.
